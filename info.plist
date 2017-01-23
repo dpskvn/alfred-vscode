@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.dpskvn.vscode</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>25D3D676-AC93-4C0C-990B-E93A448240AD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F655A021-576E-4CA9-85BE-CF9CFDFF7C57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>882FC320-1532-4480-9C2C-1D9FB61FF529</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F655A021-576E-4CA9-85BE-CF9CFDFF7C57</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Dino Paskvan</string>
+	<key>description</key>
+	<string>Open current Finder folder in Visual Studio Code</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Visual Studio Code Open</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:longkeyword}</string>
+				<key>subtext</key>
+				<string>Open current folder in Visual Studio Code</string>
+				<key>text</key>
+				<string>Visual Studio Code</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>25D3D676-AC93-4C0C-990B-E93A448240AD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Finder"	set pathLoc to POSIX path of (folder of the front window as alias)  end tell	  tell application "Visual Studio Code"	open pathLoc  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>F655A021-576E-4CA9-85BE-CF9CFDFF7C57</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>{var:shortkeyword}</string>
+				<key>subtext</key>
+				<string>Open current folder in Visual Studio Code</string>
+				<key>text</key>
+				<string>Visual Studio Code</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>882FC320-1532-4480-9C2C-1D9FB61FF529</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>25D3D676-AC93-4C0C-990B-E93A448240AD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>882FC320-1532-4480-9C2C-1D9FB61FF529</key>
+		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>290</integer>
+		</dict>
+		<key>F655A021-576E-4CA9-85BE-CF9CFDFF7C57</key>
+		<dict>
+			<key>xpos</key>
+			<integer>550</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>longkeyword</key>
+		<string>code</string>
+		<key>shortkeyword</key>
+		<string>c</string>
+	</dict>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://www.dinopaskvan.com</string>
+</dict>
+</plist>
